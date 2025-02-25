@@ -31,13 +31,13 @@ final class StringTest extends TestCase
     public function test_wrap(){
         $text = "This is a long piece of text";
         $result = wrap($text, 15);
-        $this->assertSame($result, "This is a long piece \nof text");
+        $this->assertSame($result, "This is a long \npiece of text");
         $text = "This is a an even longer piece of text which might repeat.";
         $result = wrap($text, 15);
-        $this->assertSame($result, "This is a an ev\nen longer piece\n of text which\nmight repeat.");
+        $this->assertSame($result, "This is a an ev\nen longer piece\n of text which \nmight repeat.");
     }
 
-   public function test_more_e(){
+    public function test_more_e(){
         $result = more_e("Old McDonald had a Farm");
         $this->assertSame($result, "");
         $result = more_e("EIEIO!");
