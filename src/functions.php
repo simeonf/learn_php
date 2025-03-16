@@ -28,7 +28,7 @@ function up_one_letter($x){
 //make a function that takes a lower case letter and returns the one below it.
 //If you give it "a", wrap around to "z"
 function down_one_letter($x){
-    $val = ord($x) - 1
+    $val = ord($x) - 1;
     return chr($val);
 }
 
