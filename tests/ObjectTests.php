@@ -31,6 +31,7 @@ final class ObjectTests extends TestCase
     }
 
     public function test_load_data(){
+        global $data;
         $sheet = new Sheet($data);
         $row = $sheet->rows[0];
         $this->assertTrue($row instanceof Row);
@@ -43,6 +44,7 @@ final class ObjectTests extends TestCase
     }
 
     public function test_sheet_winner(){
+        global $data;
         $sheet = new Sheet($data);
         $row = $sheet->top();
         $this->assertSame($row->name, "Jack");
